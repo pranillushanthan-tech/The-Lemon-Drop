@@ -1,0 +1,819 @@
+/* ==========================================================================
+   Global Reset & Page Variables
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden; /* Removes the white layout strips from the right edge */
+}
+
+body {
+  font-family: sans-serif;
+  background: linear-gradient(135deg, #f7df65 0%, #f4b234 50%, #ea7a21 100%);
+  background-attachment: fixed;   
+  min-height: 100vh;
+}
+
+/* ==========================================================================
+   Navigation Bar Styles (Shared across all pages)
+   ========================================================================== */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; 
+  gap: 64px; 
+  padding: 24px 64px;
+  width: 100%;
+}
+
+.title {
+  font-size: 35px; 
+  color: #16a75c; 
+  letter-spacing: -0.48px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu ul li {
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.menu ul li a {
+  color: #333333; 
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  display: inline-block;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.menu ul li a:hover {
+  color: #ffaa00; 
+  transform: translateY(-1px);
+}
+
+.menu ul li.active::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  background-color: #1a5235;
+  border-radius: 50%;
+}
+
+/* ==========================================================================
+   Homepage Layout Styles
+   ========================================================================== */
+.container {
+  display: grid;
+  grid-template-columns: 350px 1fr 350px; 
+  align-items: center;
+  gap: 60px; 
+  padding: 60px 64px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.text-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* This centers the button container perfectly */
+  justify-content: center;
+}
+
+
+.Text-1 {
+  color: #1a5235; 
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.Text-2 {
+  color: #000000; 
+  text-align: center;
+  max-width: 600px;
+  line-height: 1.8;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.group-pic {
+  display: block;
+  width: 100%;         
+  max-height: 450px;      
+  object-fit: cover;       
+  border-radius: 20px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15); 
+}
+
+/* Group Photo Placeholder Box */
+.photo-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;         
+  height: 380px;      
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px dashed rgba(26, 82, 53, 0.4); 
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  gap: 12px;
+}
+
+.placeholder-icon {
+  font-size: 40px;
+}
+
+.placeholder-text {
+  color: #1a5235;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+/* Menu Quick-Link Action Button */
+.cta-wrapper {
+  margin-top: 30px;
+}
+
+.menu-btn {
+  display: inline-block;
+  background-color: #1a5235;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 14px 32px;
+  border-radius: 30px;
+  font-size: 18px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.25s ease;
+  justify-content: center;
+}
+
+.menu-btn:hover {
+  background-color: #143f29;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ==========================================================================
+   Eco-Friendly Banner Styling
+   ========================================================================== */
+.discount-banner {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  padding: 16px 24px;
+  margin: 30px auto;
+  max-width: 800px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+.discount-banner p {
+  color: #1a5235;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   Stand Schedule & Location Banner Display Component
+   ========================================================================== */
+.schedule-section {
+  max-width: 800px;
+  margin: 40px auto 20px auto;
+  padding: 0 64px;
+  text-align: center;
+}
+
+.schedule-title {
+  color: #1a5235;
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.schedule-card {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  padding: 24px;
+  color: #1a5235;
+  font-size: 18px;
+  line-height: 1.8;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+/* Google Maps Link Custom Button Styling */
+.maps-text-link {
+  display: inline-block;
+  background-color: #1a5235;
+  color: #ffffff ;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 10px 20px;
+  margin: 12px 0;
+  border-radius: 20px;
+  font-size: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.25s ease;
+}
+
+.maps-text-link:hover {
+  background-color: #143f29;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* ==========================================================================
+   Products Page Styles
+   ========================================================================== */
+.intro-text {
+  padding: 40px 64px 0 64px;
+  text-align: center;
+}
+
+.intro-text p {
+  color: #1a5235;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.size-showcase {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 40px 64px;
+  margin-top: 20px;
+}
+
+.size-card {
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 260px;
+}
+
+.size-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+  .img-frame {
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+  }
+}
+
+.small { 
+  max-height: 120px;
+  width: auto;
+  /* transform: rotate(180deg);  */
+}
+
+.medium { 
+  max-height: 160px; 
+  width: auto; 
+}
+
+.big { 
+  max-height: 200px;
+  width: auto; 
+  /* transform: rotate(90deg);  */
+  }
+
+.card-label {
+  color: #1a5235;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
+
+/* ==========================================================================
+   Infinite Scrolling Reviews Section
+   ========================================================================== */
+.reviews-section {
+  width: 100%;
+  margin: 60px 0 40px 0;
+  text-align: center;
+  overflow: hidden; 
+}
+
+.reviews-title {
+  color: #1a5235;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.review-slider-window {
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
+  background: transparent;
+  display: flex;
+  justify-content: center; 
+}
+
+.review-track {
+  display: flex;
+  gap: 30px;
+  width: max-content; 
+}
+
+.review-card {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  padding: 24px;
+  width: 320px;
+  text-align: left;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-shrink: 0; 
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.reviewer-name {
+  color: #1a5235;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.review-stars {
+  color: #ffaa00;
+  font-size: 18px;
+}
+
+.review-text {
+  color: #333333;
+  font-size: 15px;
+  line-height: 1.5;
+  font-style: italic;
+  margin-bottom: 16px;
+}
+
+.park-source {
+  font-size: 12px;
+  color: #1a5235;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+/* ==========================================================================
+   Restored Clean About Page Framework Styles (3-Column Width Format)
+   ========================================================================== */
+.unique-about-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 60px 64px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-header-block {
+  text-align: center;
+  max-width: 700px;
+  margin-bottom: 20px;
+}
+
+.team-card {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  padding: 24px;
+  width: 320px;                      
+  text-align: center;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+}
+
+.team-img-frame {
+  width: 160px;                      
+  height: 160px;                     
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 50%;                
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;                 
+}
+
+.team-card:hover {
+  color: #b82eee;
+  transform: scale(1.03); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+}
+
+/* Computers / Wide Screens Layout */
+.team-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+/* Mobile Phones Layout */
+@media (max-width: 768px) {
+  .team-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+}
+
+.team-card h3 {
+  color: #1a5235;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.team-card p {
+  color: #333333;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   Modern Footer Component Styling
+   ========================================================================== */
+.site-footer {
+  width: 100%;
+  background: rgb(31, 172, 102);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 40px 20px;
+  margin-top: 60px;
+  clear: both;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* ==========================================================================
+   Interactive UI Animations & Keyframes
+   ========================================================================== */
+
+/* 1. Page Load Entrance: Smoothly fades and moves content up */
+.menu-btn, .Text-1, .text-block {
+  animation: fadeInUp 5s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 2. Floating Effect: Makes the Group Photo box drift gently up and down */
+.photo-placeholder {
+  animation: gentleFloat 4s ease-in-out infinite;
+}
+
+@keyframes gentleFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* 3. Pulsing Button Glow: Attracts attention to your menu link */
+.menu-btn {
+  animation: buttonPulse 0.06s infinite;
+}
+
+@keyframes buttonPulse {
+  0% {
+    box-shadow: 0 6px 20px rgba(26, 82, 53, 0.2);
+  }
+  50% {
+    box-shadow: 0 6px 25px rgba(26, 82, 53, 0.6);
+  }
+  100% {
+    box-shadow: 0 6px 20px rgba(26, 82, 53, 0.2);
+  }
+}
+
+/* ==========================================================================
+   Continuous Horizontal Marquee Animation
+   ========================================================================== */
+
+/* 1. Sets the motion properties for the review track container box */
+.review-track {
+  display: flex ;
+  gap: 30px;
+  width: max-content;
+  animation: infiniteMarquee 20s linear infinite; /* Loops the motion forever */
+}
+
+/* 2. Defines the movement steps to loop perfectly without sudden jumps */
+@keyframes infiniteMarquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* Moves left by half its total width so the duplicate cards slide in seamlessly */
+    transform: translateX(-50%);
+  }
+}
+
+/* 3. Optional: Pauses the scrolling motion if a visitor hovers their mouse over a review */
+.review-track:hover {
+  animation-play-state: paused;
+}
+
+.footer-link {
+  color: rgba(54, 68, 83, 0.836);
+  text-decoration: none;
+  font-weight: 500;
+  justify-content: center;
+}
+
+.footer-link:hover {
+  color: #b82eee;
+  transform: scale(1.05);
+}
+
+.footer-link{
+  color: #ff4500;
+}
+/* ==========================================================================
+   Responsive Mobile Media Queries & Layout Fixes
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* Fixes the header to align all items vertically and keeps spacing compact */
+  .navbar {
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px 10px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Forces ALL THREE tabs (Home, Products, About Us) to stay side-by-side */
+  .menu ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .menu ul li a {
+    font-size: 15px;
+    white-space: nowrap;
+  }
+
+  /* Converts the 3-column homepage grid into a single vertical stack */
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 20px;
+    transform: none; /* Prevents the loading animation from locking elements off-screen */
+  }
+
+  /* Safely scales your images and placeholders to fit phone widths */
+  .group-pic,
+  .photo-placeholder {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .photo-placeholder {
+    height: 250px; /* Gives the coming soon placeholder a clean mobile size */
+  }
+
+    /* Forces the Small, Medium, and Big product cards to stack vertically on phone viewports */
+  .size-showcase {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+    width: 100%;
+  }
+
+}
+
+.group-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  display: block;
+}
+
+/* Live Submission Container Layout */
+.review-form-container {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  padding: 24px;
+  max-width: 600px;
+  margin: 20px auto 40px auto;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.05);
+  -webkit-backdrop-filter: blur(10px); /* Smooth background blur matching your theme */
+  backdrop-filter: blur(10px);
+  text-align: center;
+}
+
+.review-form-container h3 {
+  margin-top: 0;
+  color: #0b5327; /* Dark green matching your theme heading color */
+  margin-bottom: 16px;
+  font-size: 20px;
+}
+
+/* Aligning inputs horizontally */
+.form-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.form-row input,
+.form-row select {
+  flex: 1;
+  min-width: 150px;
+}
+
+/* Input field aesthetic styles */
+.review-form-container input,
+.review-form-container select,
+.review-form-container textarea {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-family: inherit;
+  font-size: 14px;
+  color: #333;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.review-form-container input:focus,
+.review-form-container select:focus,
+.review-form-container textarea:focus {
+  border-color: #4ab234; /* Green focus highlight ring */
+}
+
+.review-form-container textarea {
+  width: 100%;
+  box-sizing: border-box;
+  resize: vertical;
+  margin-bottom: 16px;
+}
+
+/* Green Action Button styling */
+.submit-review-btn {
+  background: #4ab234; 
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+  display: inline-block;
+}
+
+.submit-review-btn:hover {
+  background: #3e962b;
+  transform: translateY(-2px);
+}
+
+.submit-review-btn:active {
+  transform: translateY(0);
+}
+
+/* Smooth entry animation for newly added cards */
+@keyframes slideInCard {
+  from { opacity: 0; transform: scale(0.9) translateY(20px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.animate-new-card {
+  animation: slideInCard 0.4s ease-out forwards;
+}
+
+/* Container block positioning for layout actions inside card bases */
+.card-controls {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 12px;
+  padding-top: 8px;
+  border-top: 1px dashed rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+/* Micro Action Controls styling blueprint framework layout */
+.ctrl-btn {
+  border: none;
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+/* Edit State Theme styling */
+.edit-btn {
+  background: rgba(0, 123, 255, 0.1);
+  color: #007bff;
+}
+.edit-btn:hover {
+  background: #007bff;
+  color: white;
+}
+
+/* Delete State Theme styling */
+.delete-btn {
+  background: rgba(220, 53, 69, 0.1);
+  color: #dc3545;
+}
+.delete-btn:hover {
+  background: #dc3545;
+  color: white;
+}
+
+/* Ensure smooth removal transitions */
+.user-created-card {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}

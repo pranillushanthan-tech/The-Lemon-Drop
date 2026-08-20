@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Lemonade.css" />
+    <title>The Lemonade Stand</title>
+  </head>
+  <body>
+    <!-- Page fade transition overlay container element -->
+    <div class="page-fade-overlay"></div>
+
+    <header>
+      <nav class="navbar">
+        <h1 class="title">The Lemonade Stand</h1>
+        <div class="menu">
+          <ul>
+            <li class="active"><a href="Homepage.html">Home</a></li>
+            <li><a href="Products.html">Products</a></li>
+            <li><a href="About.html">About Us</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Layout Container Box -->
+    <div class="container">
+      <!-- 1. Left Side Image -->
+      <img
+        src="lemonade ex. image.jpg"
+        alt="Fresh Lemonade"
+        class="group-pic"
+      />
+
+      <!-- 2. Centered Text Block Content -->
+      <div class="text-block">
+        <h1 class="Text-1">Welcome to The Lemonade Stand.</h1>
+        <p class="Text-2">
+          We would love to give you some refreshments for your time at the park.
+          Our names are Mickey, Pranil and Devan.
+        </p>
+        <!-- Interactive Menu Quick-Link Button -->
+        <div class="cta-wrapper">
+          <a href="Products.html" class="menu-btn">See Our Sizes & Prices</a>
+        </div>
+      </div>
+
+      <!-- 3. Right Side - Updated Live Image Container -->
+      <div class="photo-placeholder">
+        <img src="DMP.jpg" alt="Group Photo" class="group-photo-img" />
+      </div>
+    </div>
+
+    <!-- Eco-Friendly Bring Your Own Cup Discount Banner -->
+    <div class="discount-banner">
+      <p>
+        🌱 <strong>Go Green!</strong> Bring your own reusable cup or water
+        bottle to the park stand
+        <strong
+          >if You want <b>W.A. Scammell Reserve</b> to be a more sustainable
+          place</strong
+        >
+      </p>
+    </div>
+
+    <!-- Stand Schedule & Location Details Banner -->
+    <div class="schedule-section">
+      <h2 class="schedule-title">Find Our Stand 📍</h2>
+      <div class="schedule-card">
+        <p><strong>Where:</strong> W.A. Scammell Reserve Playground</p>
+        <p>
+          <a
+            href="https://google.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="maps-text-link"
+            >Click Here to go to Google Maps</a
+          >
+        </p>
+
+        <p>
+          <strong>When:</strong> Every Saturday & Sunday | 11:00 AM — 4:00 PM
+          (Weather Permitting)
+        </p>
+      </div>
+    </div>
+
+    <!-- Park Customer Reviews Scrolling Section -->
+    <div class="reviews-section">
+      <h2 class="reviews-title">What Our Park Customers Say</h2>
+
+      <div class="review-slider-window">
+        <div class="review-track" id="reviewTrack">
+          <!-- Review Card 1 -->
+          <div class="review-card">
+            <div class="review-header">
+              <span class="reviewer-name">Alex M. (By the Field)</span>
+              <span class="review-stars">★★★★★</span>
+            </div>
+            <p class="review-text">
+              "The best homemade lemonade! The big cup kept me perfectly cool
+              after playing a game of soccer in the sun."
+            </p>
+            <div class="park-source">📍 Park Visitor Review</div>
+          </div>
+
+          <!-- Review Card 2 -->
+          <div class="review-card">
+            <div class="review-header">
+              <span class="reviewer-name">Sarah K. (Playground)</span>
+              <span class="review-stars">★★★★★</span>
+            </div>
+            <p class="review-text">
+              "Super refreshing and perfectly sweet. My kids absolutely loved
+              the small cups. We will definitely stop by your stand again!"
+            </p>
+            <div class="park-source">📍 Park Visitor Review</div>
+          </div>
+
+          <!-- Review Card 3 -->
+          <div class="review-card">
+            <div class="review-header">
+              <span class="reviewer-name">Mr. Thompson</span>
+              <span class="review-stars">★★★★★</span>
+            </div>
+            <p class="review-text">
+              "The taste reminds me of old-fashioned lemonade from when I was a
+              kid. Great job, kids!"
+            </p>
+            <div class="park-source">📍 Local Neighbor</div>
+          </div>
+
+          <!-- Review Card 4 -->
+          <div class="review-card">
+            <div class="review-header">
+              <span class="reviewer-name">Emily R. (Dog Walker)</span>
+              <span class="review-stars">★★★★★</span>
+            </div>
+            <p class="review-text">
+              "They even offered a little bowl of fresh cold tap water for my
+              puppy while I bought my big cup lemonade. Essential hospitality!"
+            </p>
+            <div class="park-source">📍 Regular Visitor</div>
+          </div>
+
+          <!-- ========================================== -->
+          <!-- DUPLICATED CARDS FOR SEAMLESS INFINITE LOOP -->
+          <!-- ========================================== -->
+
+          <!-- Review Card 1 Duplicate -->
+          <div class="review-card">
+            <div class="review-header">
+              <span class="reviewer-name">Alex M. (By the Field)</span>
+              <span class="review-stars">★★★★★</span>
+            </div>
+            <p class="review-text">
+              "The best homemade lemonade! The big cup kept me perfectly cool
+              after playing a game of soccer in the sun."
+            </p>
+            <div class="park-source">📍 Park Visitor Review</div>
+          </div>
+
+          <!-- Review Card 2 Duplicate -->
+          <div class="review-card">
+            <div class="review-header">
+              <span class="reviewer-name">Sarah K. (Playground)</span>
+              <span class="review-stars">★★★★★</span>
+            </div>
+            <p class="review-text">
+              "Super refreshing and perfectly sweet. My kids absolutely loved
+              the small cups. We will definitely stop by your stand again!"
+            </p>
+            <div class="park-source">📍 Park Visitor Review</div>
+          </div>
+
+          <!-- Review Card 3 Duplicate -->
+          <div class="review-card">
+            <div class="review-header">
+              <span class="reviewer-name">Mr. Thompson</span>
+              <span class="review-stars">★★★★★</span>
+            </div>
+            <p class="review-text">
+              "The taste reminds me of old-fashioned lemonade from when I was a
+              kid. Great job, kids!"
+            </p>
+            <div class="park-source">📍 Local Neighbor</div>
+          </div>
+
+          <!-- Review Card 4 Duplicate -->
+          <div class="review-card">
+            <div class="review-header">
+              <span class="reviewer-name">Emily R. (Dog Walker)</span>
+              <span class="review-stars">★★★★★</span>
+            </div>
+            <p class="review-text">
+              "They even offered a little bowl of fresh cold tap water for my
+              puppy while I bought my big cup lemonade. Essential hospitality!"
+            </p>
+            <div class="park-source">📍 Regular Visitor</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Corrected Footer Elements -->
+    <footer class="site-footer">
+      <div class="footer-container">
+        <!-- Contact Info Block -->
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <p>Have a question or want to give a review?</p>
+          <a href="mailto:team@lemonadestand.com" class="footer-link"
+            >team@lemonadestand.com</a
+          >
+        </div>
+
+        <!-- Credits & Copyright Block -->
+        <div class="footer-section">
+          <h3>Website Credits</h3>
+          <p>Proudly designed & coded by: Pranil</p>
+          <br />
+          <strong>Business Owners: Mickey, Devan, Pranil</strong>
+          <p class="copyright">
+            &copy; 2026 The Lemonade Stand&trade;. Squeezed fresh in the park.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
