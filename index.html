@@ -158,5 +158,26 @@
         </div>
       </div> <!-- ADDED: Closes .footer-container -->
     </footer>
+
+        <script>
+        function updateShopStatus() {
+            // 1. Get the current day of the week (0 = Sunday, 1 = Monday, ..., 6 = Saturday)
+            const currentDay = new Date().getDay();
+            const statusElement = document.getElementById('shop-status');
+
+            // 2. Set your custom schedule rules here:
+            // Example: Closed on Mondays (1) and Tuesdays (2). Open all other days.
+            if (currentDay === 1 || currentDay === 2) {
+                statusElement.innerText = "● Closed Today";
+                statusElement.className = "status-badge closed";
+            } else {
+                statusElement.innerText = "● Open Now";
+                statusElement.className = "status-badge open";
+            }
+        }
+
+        // Run the schedule check as soon as the page loads
+        updateShopStatus();
+    </script>
   </body>
 </html>
