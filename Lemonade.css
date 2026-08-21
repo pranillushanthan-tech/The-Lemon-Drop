@@ -817,3 +817,50 @@ body {
 .user-created-card {
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
+
+/* CSS Styling */
+
+/* 1. Container needs relative positioning so the tooltip stays attached to it */
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* 2. Style the actual button (Google Meet style) */
+.meet-btn {
+  background-color: #3c4043;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  padding: 12px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* 3. Style the tooltip text (Hidden by default) */
+.tooltip-text {
+  visibility: hidden;
+  background-color: #202124;
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-family: Roboto, sans-serif;
+  
+  /* Position it perfectly below the button */
+  position: absolute;
+  top: 110%; 
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.2s; /* Smooth fade in */
+}
+
+/* 4. Show the tooltip when hovering over the container */
+.tooltip-container:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
