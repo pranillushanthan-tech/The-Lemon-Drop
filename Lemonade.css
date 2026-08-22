@@ -1,4 +1,4 @@
-/* ==========================================================================
+/* /* ==========================================================================
    Global Reset & Page Variables
    ========================================================================== */
 * {
@@ -25,11 +25,32 @@ body {
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: flex-start; 
-  gap: 64px; 
+  justify-content: space-between; /* Changes from flex-start to push text to the right */
   padding: 24px 64px;
   width: 100%;
 }
+
+/* Add this new helper class underneath the navbar block */
+.nav-left-group {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+}
+
+.closed{
+  color: #e20d0d; 
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.36px;
+}
+
+.open{
+  color: #46ae0a; 
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.36px;
+}
+
 
 .title {
   font-size: 35px; 
@@ -816,8 +837,4 @@ body {
 /* Ensure smooth removal transitions */
 .user-created-card {
   transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.location{
-   color: orange;
-}
+} 
