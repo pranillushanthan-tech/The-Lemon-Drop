@@ -30,26 +30,30 @@ body {
   width: 100%;
 }
 
+/* Add this new helper class underneath the navbar block */
 .nav-left-group {
   display: flex;
   align-items: center;
-  gap: 64px; /* Creates the space between the title and Home link */
+  gap: 64px;
 }
 
-
-.closed{
-  color: #e20d0d; 
-  font-size: 18px;
+/* Base style for the status text on the far right */
+.navbar > span {
+  font-size: 16px;
   font-weight: 600;
-  letter-spacing: -0.36px;
+  white-space: nowrap;
 }
 
-.open{
-  color: #46ae0a; 
-  font-size: 18px;
-  font-weight: 600;
-  letter-spacing: -0.36px;
+/* If the status class is closed, make it red */
+.closed {
+  color: #dc3545;
 }
+
+/* If the status class is open, make it green */
+.open {
+  color: #16a75c;
+}
+
 
 
 .title {
