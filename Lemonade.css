@@ -30,12 +30,12 @@ body {
   width: 100%;
 }
 
-/* Add this new helper class underneath the navbar block */
 .nav-left-group {
   display: flex;
   align-items: center;
-  gap: 64px;
+  gap: 64px; /* Creates the space between the title and Home link */
 }
+
 
 .closed{
   color: #e20d0d; 
