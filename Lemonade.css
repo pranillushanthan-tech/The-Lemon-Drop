@@ -817,3 +817,7 @@ body {
 .user-created-card {
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
+
+.location{
+   color: orange;
+}
