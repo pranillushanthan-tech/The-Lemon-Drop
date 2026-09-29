@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Lemon Drop</title>
     
-    <!-- Link to Stylesheet -->
+    <!-- Link to Main Stylesheet -->
     <link rel="stylesheet" href="Lemonade.css" />
     
-    <!-- Complete Multi-Device Favicon Package Setup -->
+    <!-- Complete Multi-Device Favicon & Mobile App Suite Linking -->
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
     <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
@@ -19,9 +19,10 @@
     <!-- Page fade transition overlay container element -->
     <div class="page-fade-overlay"></div>
 
+    <!-- Header & Navigation Bar -->
     <header>
       <nav class="navbar">
-        <!-- Flexbox container grouping the logo, title, and menu tabs -->
+        <!-- Flex container aligning logo, title text, and menu items inline -->
         <div class="nav-left-group">
           <img src="./favicon-32x32.png" alt="The Lemon Drop Logo" class="nav-logo" />
           <h1 class="title">The Lemon Drop</h1>
@@ -35,44 +36,43 @@
       </nav>
     </header>
 
-    <!-- Main Layout Container Box -->
-    <div class="container">
-      <!-- 1. Left Side Image -->
+    <!-- Main Content Container Box -->
+    <main class="container">
+      <!-- 1. Left Side Product Image -->
       <img
         src="lemonade ex. image.jpg"
         alt="Fresh Lemonade"
         class="group-pic"
       />
 
-      <!-- 2. Centered Text Block Content -->
+      <!-- 2. Centered Welcome Text Block -->
       <div class="text-block">
         <h1 class="Text-1">Welcome to The Lemon Drop.</h1>
         <p class="Text-2">
           "We would love to give you some refreshments for your time at the park. Our stand welcomes everyone to cool down with simple drinks made from fresh farm lemons and real sugar."
         </p>
-        <!-- Interactive Menu Quick-Link Button -->
+        <!-- Pricing Quick-Link Button -->
         <div class="cta-wrapper">
           <a href="Products.html" class="menu-btn">See Our Pricing</a>
         </div>
       </div>
 
-      <!-- 3. Right Side - Live Image Container -->
+      <!-- 3. Right Side - Photo Placeholder Container -->
       <div class="photo-placeholder">
         <img src="DMP.jpg" alt="Group Photo" class="group-photo-img" />
       </div>
-    </div>
+    </main>
 
     <!-- Eco-Friendly Bring Your Own Cup Discount Banner -->
-    <div class="discount-banner">
+    <section class="discount-banner">
       <p>
-        🌱 <strong>Go Green!</strong> Bring your own reusable cup or water
-        bottle to the park stand
+        🌱 <strong>Go Green!</strong> Bring your own reusable cup or water bottle to the park stand 
         <strong>if You want <b>Our environment</b> to be a more sustainable place</strong>
       </p>
-    </div>
+    </section>
 
     <!-- Stand Schedule & Location Details Banner -->
-    <div class="schedule-section">
+    <section class="schedule-section">
       <h2 class="schedule-title">Find Our Stand 📍</h2>
       <div class="schedule-card">
         <p><strong>Where: </strong>Guest Rd</p>
@@ -82,15 +82,16 @@
             target="_blank"
             rel="noopener noreferrer"
             class="maps-text-link"
-            >Click Here to come find us and have some fresh lemonade.</a
           >
+            Click Here to come find us and have some fresh lemonade.
+          </a>
         </p>
         <p><strong>When:</strong> Not Sure yet!</p>
       </div>
-    </div>
+    </section>
 
     <!-- Park Customer Reviews Scrolling Section -->
-    <div class="reviews-section">
+    <section class="reviews-section">
       <h2 class="reviews-title">What Our Park Customers Say</h2>
       <div class="review-slider-window">
         <div class="review-track" id="reviewTrack">
@@ -134,8 +135,7 @@
           </div>
         </div> 
       </div> 
-    </div> 
-
+    </section>
 
     <!-- Footer Elements -->
     <footer class="site-footer">
