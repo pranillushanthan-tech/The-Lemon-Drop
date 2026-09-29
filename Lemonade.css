@@ -867,3 +867,18 @@ body {
 .user-created-card {
   transition: opacity 0.3s ease, transform 0.3s ease;
 } 
+
+/* Aligning the new layout group inside the navbar */
+.nav-left-group {
+  display: flex;
+  align-items: center; /* Centers the image logo vertically with the text */
+  gap: 15px;           /* Adds space between logo, title, and menu links */
+}
+
+/* Custom styling for your visible navbar logo icon */
+.nav-logo {
+  width: 32px;         /* Keeps the image looking perfectly sized in the nav */
+  height: 32px;
+  object-fit: contain; /* Prevents stretching */
+  border-radius: 6px;  /* Optional subtle rounded corners */
+}
