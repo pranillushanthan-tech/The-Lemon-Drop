@@ -868,17 +868,30 @@ body {
   transition: opacity 0.3s ease, transform 0.3s ease;
 } 
 
+/* ==========================================
+   THE LEMON DROP - SHARP IMAGE CONFIGURATION
+   ========================================== */
+
 .nav-left-group {
   display: flex !important;
   flex-direction: row !important;
   align-items: center !important;
-  gap: 15px !important;
+  justify-content: flex-start !important;
+  gap: 16px !important;
 }
 
 .nav-logo {
-  width: 42px !important;
-  height: 42px !important;
-  min-width: 42px !important;
+  width: 45px !important;       /* Clean display sizing on screen */
+  height: 45px !important;
+  min-width: 45px !important;
+  min-height: 45px !important;
   object-fit: contain !important;
   background: transparent !important;
+  
+  /* CRITICAL RENDERING CODES: Forces browsers to keep the image edges sharp */
+  image-rendering: -webkit-optimize-contrast !important;
+  image-rendering: crisp-edges !important;
+  image-rendering: pixelated !important;
+  
+  filter: drop-shadow(1px 2px 3px rgba(0, 0, 0, 0.12)) !important;
 }
