@@ -3,27 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="Lemonade.css" />
-    <link rel="icon" type="image/png" href="The_Lemon_Drop.png">
     <title>Products</title>
+    
+    <!-- Link to Main Stylesheet -->
+    <link rel="stylesheet" href="Lemonade.css" />
+    
+    <!-- Complete Multi-Device Favicon Package Setup -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="manifest" href="./site.webmanifest">
   </head>
   <body>
-<header>
-  <nav class="navbar">
-    <!-- Groups the title and menu tabs on the left, locked in the same order -->
-    <div class="nav-left-group">
-      <h1 class="title">The Lemon Drop</h1>
-      <div class="menu">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li class="active"><a href="Products.html">Products</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</header>
+    <!-- Header & Navigation Bar -->
+    <header>
+      <nav class="navbar">
+        <!-- Flex container aligning high-res logo, title text, and menu items inline -->
+        <div class="nav-left-group">
+          <img src="./android-chrome-512x512.png" alt="The Lemon Drop Logo" class="nav-logo" />
+          <h1 class="title">The Lemon Drop</h1>
+          <div class="menu">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li class="active"><a href="Products.html">Products</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
 
-
+    <!-- Introductory Banner Info -->
     <div class="Text-1">
       <p>
         We sell homemade lemonade for you.
@@ -33,29 +43,29 @@
     </div>
 
     <!-- Product Showcase Display Block -->
-    <div class="size-showcase">
+    <main class="size-showcase">
       <div class="size-card">
         <div class="img-frame">
           <img src="small.png" alt="Small cup" class="small" />
         </div>
-        <span class="card-label"
-          >Small Cup <br />
+        <span class="card-label">
+          Small Cup <br />
           Capacity: 200ml <br />
           Price: $1.20 <br />
-          Price per 3L: $18</span
-        >
+          Price per 3L: $18
+        </span>
       </div>
 
       <div class="size-card">
         <div class="img-frame">
           <img src="Medium.png" alt="Medium cup" class="medium" />
         </div>
-        <span class="card-label"
-          >Medium Cup <br />
+        <span class="card-label">
+          Medium Cup <br />
           Capacity: 375ml <br />
           Price: $2.00 <br />
-          Price per 3L: $16</span
-        >
+          Price per 3L: $16
+        </span>
       </div>
 
       <div class="size-card">
@@ -69,11 +79,11 @@
           Price per 3L: $15 <br />
         </span>
       </div>
-    </div>
+    </main>
 
-    <div class="reviews-section">
+    <!-- Park Customer Reviews Scrolling Section -->
+    <section class="reviews-section">
       <h2 class="reviews-title">What Our Park Customers Say</h2>
-
       <div class="review-slider-window">
         <div class="review-track" id="reviewTrack">
           <!-- Review Card 1 -->
@@ -114,13 +124,11 @@
             </p>
             <div class="park-source">📍 Park Visitor Review</div>
           </div>
+        </div> 
+      </div> 
+    </section>
 
-        </div> <!-- ADDED: Closes #reviewTrack -->
-      </div> <!-- ADDED: Closes .review-slider-window -->
-    </div> <!-- ADDED: Closes .reviews-section -->
-
-
-    <!-- Corrected Footer Elements (Now completely outside the review slider) -->
+    <!-- Footer Elements -->
     <footer class="site-footer">
       <div class="footer-container">
         <!-- Contact Info Block -->
@@ -141,7 +149,7 @@
             2026 The Lemon Drop. Squeezed fresh in the park.
           </p>
         </div>
-      </div> <!-- ADDED: Closes .footer-container -->
+      </div> 
     </footer>
   </body>
 </html>
