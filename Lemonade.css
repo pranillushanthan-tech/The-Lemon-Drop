@@ -868,17 +868,39 @@ body {
   transition: opacity 0.3s ease, transform 0.3s ease;
 } 
 
-/* Aligning the new layout group inside the navbar */
+/* ==========================================
+   THE LEMON DROP NAVBAR LOGO FIX
+   ========================================== */
+
+/* Forces the navbar contents to line up horizontally instead of overlapping */
 .nav-left-group {
-  display: flex;
-  align-items: center; /* Centers the image logo vertically with the text */
-  gap: 15px;           /* Adds space between logo, title, and menu links */
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 20px !important; /* Balanced gap spacing out Logo, Text Title, and Links */
 }
 
-/* Custom styling for your visible navbar logo icon */
+/* Explicit size containment for the visible branding logo icon */
 .nav-logo {
-  width: 32px;         /* Keeps the image looking perfectly sized in the nav */
-  height: 32px;
-  object-fit: contain; /* Prevents stretching */
-  border-radius: 6px;  /* Optional subtle rounded corners */
+  width: 32px !important;
+  height: 32px !important;
+  min-width: 32px !important;  /* Stops flex-box models from pinching your icon */
+  min-height: 32px !important;
+  object-fit: contain !important;
+  border-radius: 6px !important; /* Subtle aesthetic rounding */
+}
+
+/* Assures text links inline accurately next to headers */
+.menu {
+  display: flex !important;
+  align-items: center !important;
+}
+
+.menu ul {
+  display: flex !important;
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  gap: 15px !important;
 }
