@@ -3,38 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Lemon Drop</title>
+    
+    <!-- Link to Stylesheet -->
     <link rel="stylesheet" href="Lemonade.css" />
     
     <!-- Complete Multi-Device Favicon Package Setup -->
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="manifest" href="site.webmanifest">
-
-    <title>The Lemon Drop</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="manifest" href="./site.webmanifest">
   </head>
   <body>
     <!-- Page fade transition overlay container element -->
     <div class="page-fade-overlay"></div>
 
-<header>
-  <nav class="navbar">
-    <!-- This new div groups the logo, title, and menu tabs on the left -->
-    <div class="nav-left-group">
-      <!-- VISIBLE LOGO IMAGE ADDED HERE -->
-      <img src="favicon-32x32.png" alt="The Lemon Drop Logo" class="nav-logo" />
-      <h1 class="title">The Lemon Drop</h1>
-      <div class="menu">
-        <ul>
-          <li class="active"><a href="index.html">Home</a></li>
-          <li><a href="Products.html">Products</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</header>
-
+    <header>
+      <nav class="navbar">
+        <!-- Flexbox container grouping the logo, title, and menu tabs -->
+        <div class="nav-left-group">
+          <img src="./favicon-32x32.png" alt="The Lemon Drop Logo" class="nav-logo" />
+          <h1 class="title">The Lemon Drop</h1>
+          <div class="menu">
+            <ul>
+              <li class="active"><a href="index.html">Home</a></li>
+              <li><a href="Products.html">Products</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
 
     <!-- Main Layout Container Box -->
     <div class="container">
@@ -49,15 +48,15 @@
       <div class="text-block">
         <h1 class="Text-1">Welcome to The Lemon Drop.</h1>
         <p class="Text-2">
-"We would love to give you some refreshments for your time at the park. Our stand welcomes everyone to cool down with simple drinks made from fresh farm lemons and real sugar."
+          "We would love to give you some refreshments for your time at the park. Our stand welcomes everyone to cool down with simple drinks made from fresh farm lemons and real sugar."
         </p>
         <!-- Interactive Menu Quick-Link Button -->
         <div class="cta-wrapper">
-<a href="Products.html" class="menu-btn">See Our Pricing</a>
+          <a href="Products.html" class="menu-btn">See Our Pricing</a>
         </div>
       </div>
 
-      <!-- 3. Right Side - Updated Live Image Container -->
+      <!-- 3. Right Side - Live Image Container -->
       <div class="photo-placeholder">
         <img src="DMP.jpg" alt="Group Photo" class="group-photo-img" />
       </div>
@@ -68,10 +67,7 @@
       <p>
         🌱 <strong>Go Green!</strong> Bring your own reusable cup or water
         bottle to the park stand
-        <strong
-          >if You want <b>Our environment</b> to be a more sustainable
-          place</strong
-        >
+        <strong>if You want <b>Our environment</b> to be a more sustainable place</strong>
       </p>
     </div>
 
@@ -82,24 +78,20 @@
         <p><strong>Where: </strong>Guest Rd</p>
         <p>
           <a
-            href="https://www.google.com/maps/place/Guest+Rd,+Melbourne+VIC/@-37.9113603,145.0915105,785m/data=!3m2!1e3!4b1!4m6!3m5!1s0x6ad66afff3ad45d1:0xaad254d5ca2f4086!8m2!3d-37.9113603!4d145.0940854!16s%2Fg%2F11cjg86pj9?entry=ttu&g_ep=EgoyMDI2MDkwMi4wIKXMDSoASAFQAw%3D%3D"
+            href="https://google.com"
             target="_blank"
             rel="noopener noreferrer"
             class="maps-text-link"
             >Click Here to come find us and have some fresh lemonade.</a
           >
         </p>
-
-        <p>
-          <strong>When:</strong> Not Sure yet!
-        </p>
+        <p><strong>When:</strong> Not Sure yet!</p>
       </div>
     </div>
 
     <!-- Park Customer Reviews Scrolling Section -->
     <div class="reviews-section">
       <h2 class="reviews-title">What Our Park Customers Say</h2>
-
       <div class="review-slider-window">
         <div class="review-track" id="reviewTrack">
           <!-- Review Card 1 -->
@@ -140,13 +132,12 @@
             </p>
             <div class="park-source">📍 Park Visitor Review</div>
           </div>
+        </div> 
+      </div> 
+    </div> 
 
-        </div> <!-- ADDED: Closes #reviewTrack -->
-      </div> <!-- ADDED: Closes .review-slider-window -->
-    </div> <!-- ADDED: Closes .reviews-section -->
 
-
-    <!-- Corrected Footer Elements (Now completely outside the review slider) -->
+    <!-- Footer Elements -->
     <footer class="site-footer">
       <div class="footer-container">
         <!-- Contact Info Block -->
@@ -167,7 +158,7 @@
             2026 The Lemon Drop. Squeezed fresh in the park.
           </p>
         </div>
-      </div> <!-- ADDED: Closes .footer-container -->
+      </div> 
     </footer>
   </body>
 </html>
