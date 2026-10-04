@@ -103,6 +103,14 @@ body {
   border-radius: 50%;
 }
 
+
+/* Add this to your stylesheet to restrict the logo size */
+.nav-logo {
+  height: 50px;     /* Forces the massive logo to shrink to a standard height */
+  width: auto;       /* Keeps the image aspect ratio perfectly proportional */
+  object-fit: contain;
+}
+
 /* ==========================================================================
    Homepage Layout Styles
    ========================================================================== */
