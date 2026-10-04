@@ -58,7 +58,7 @@ body {
 
 .title {
   font-size: 35px; 
-  color: #1a5235; 
+  color: #16a75c; 
   letter-spacing: -0.48px;
   font-weight: 700;
   margin: 0;
@@ -542,47 +542,26 @@ body {
 }
 
 /* ==========================================================================
-   Footer Elements & Layout Styles
+   Modern Footer Component Styling
    ========================================================================== */
 .site-footer {
   width: 100%;
-  margin-top: 60px;
-  padding: 40px 64px;
+  background: rgb(31, 172, 102);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 24px 20px;
+  margin-top: 0;
+  clear: both;
 }
 
 .footer-container {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  justify-content: flex-start; /* Restored back to normal left alignment */
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 24px;
 }
-
-.footer-section {
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 16px;
-  padding: 24px;
-  max-width: 450px;
-  width: 100%;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
-  text-align: left; /* Restored back to normal left text alignment */
-}
-
-.footer-section h3 {
-  color: #1a5235;
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 12px;
-}
-
-.copyright {
-  color: #000000;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.6;
-}
-
-
 
 /* ==========================================================================
    Interactive UI Animations & Keyframes
@@ -889,31 +868,3 @@ body {
 .user-created-card {
   transition: opacity 0.3s ease, transform 0.3s ease;
 } 
-
-/* ==========================================
-   THE LEMON DROP - SHARP IMAGE CONFIGURATION
-   ========================================== */
-
-.nav-left-group {
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center !important;
-  justify-content: flex-start !important;
-  gap: 16px !important;
-}
-
-.nav-logo {
-  width: 45px !important;       /* Clean display sizing on screen */
-  height: 45px !important;
-  min-width: 45px !important;
-  min-height: 45px !important;
-  object-fit: contain !important;
-  background: transparent !important;
-  
-  /* CRITICAL RENDERING CODES: Forces browsers to keep the image edges sharp */
-  image-rendering: -webkit-optimize-contrast !important;
-  image-rendering: crisp-edges !important;
-  image-rendering: pixelated !important;
-  
-  filter: drop-shadow(1px 2px 3px rgba(0, 0, 0, 0.12)) !important;
-}
