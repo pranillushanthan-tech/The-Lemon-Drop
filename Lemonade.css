@@ -542,25 +542,46 @@ body {
 }
 
 /* ==========================================================================
-   Modern Footer Component Styling
+   Footer Elements & Layout Styles
    ========================================================================== */
 .site-footer {
   width: 100%;
-  background: rgb(31, 172, 102);
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
-  padding: 40px 20px;
   margin-top: 60px;
-  clear: both;
+  padding: 40px 64px;
 }
 
 .footer-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 30px;
+  justify-content: flex-start; /* Aligns the remaining section block strictly to the left edge */
 }
+
+.footer-section {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  padding: 24px;
+  max-width: 450px;
+  width: 100%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  text-align: left; /* Forces left text orientation inside the block */
+}
+
+.footer-section h3 {
+  color: #1a5235;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.copyright {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
 
 /* ==========================================================================
    Interactive UI Animations & Keyframes
