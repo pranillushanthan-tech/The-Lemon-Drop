@@ -30,13 +30,6 @@ body {
   width: 100%;
 }
 
-/* Add this new helper class underneath the navbar block */
-.nav-left-group {
-  display: flex;
-  align-items: center;
-  gap: 64px;
-}
-
 /* Base style for the status text on the far right */
 .navbar > span {
   font-size: 16px;
@@ -103,13 +96,20 @@ body {
   border-radius: 50%;
 }
 
+/* Add this new helper class underneath the navbar block */
+.nav-left-group {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+}
 
-/* Add this to your stylesheet to restrict the logo size */
+/* Add this right below it to fix the layout explosion */
 .nav-logo {
-  height: 50px;     /* Forces the massive logo to shrink to a standard height */
-  width: auto;       /* Keeps the image aspect ratio perfectly proportional */
+  height: 60px;       /* Shrinks the 512px logo down to a normal navbar size */
+  width: auto;        /* Keeps the logo round without squishing it */
   object-fit: contain;
 }
+
 
 /* ==========================================================================
    Homepage Layout Styles
