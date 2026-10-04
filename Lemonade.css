@@ -554,7 +554,7 @@ body {
   max-width: 1400px;
   margin: 0 auto;
   display: flex;
-  justify-content: flex-end; /* Aligns the entire content card strictly to the right side of the footer */
+  justify-content: flex-start; /* Restored back to normal left alignment */
 }
 
 .footer-section {
@@ -565,7 +565,7 @@ body {
   max-width: 450px;
   width: 100%;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
-  text-align: right; /* Flips the text internally so it aligns neatly to the right edge */
+  text-align: left; /* Restored back to normal left text alignment */
 }
 
 .footer-section h3 {
@@ -581,6 +581,7 @@ body {
   font-weight: 500;
   line-height: 1.6;
 }
+
 
 
 /* ==========================================================================
